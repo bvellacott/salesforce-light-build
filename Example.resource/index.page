@@ -1,0 +1,23 @@
+<apex:page docType="html-5.0" title="Example" sidebar="false">
+  <script>
+  // configure requirejs
+  (function(){
+    window.require = {
+
+        baseUrl: "{!URLFOR($Resource.Example, '.')}",
+        paths: {
+          // requirejs plugin for retreiving text files
+          text: 'lib/text',
+
+          jquery: 'lib/jquery',
+        },
+        // declare dependencies that need to be loaded before loading data-main
+        deps:['text'],
+    };
+  })()
+  </script>
+
+  <input type="button" class="hello" value="Say hello!"></input>
+
+	<script data-main='app.js' src="{!URLFOR($Resource.Example, 'lib/require.js')}"/>
+</apex:page>

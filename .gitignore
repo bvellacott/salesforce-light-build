@@ -1,0 +1,11 @@
+# https://git-scm.com/docs/gitignore
+
+# exclude node modules, credentials and system files
+dist
+node_modules
+experiments
+sfConnection.cache
+sfCredentials.json
+npm-debug.log
+**/__MACOSX
+**/.DS_Store
